@@ -13,6 +13,25 @@ import { store } from '../data/store';
 <template>
   <div class="container-fluid">
 
+    <div class="plus d-flex justify-content-center ">+</div>
+
+    <div class="container-square">
+      <div class="square text-center">
+        <p class="icon"><i class="fa-solid fa-laptop"></i></p>
+        
+        <p class="text-square demo">Demos</p>
+      </div>
+
+      <div class="square text-center">
+        
+        <span class="green sale">$</span>
+
+        <p class="green">39</p> 
+       
+        <p class="text-square">On Sale</p>
+             
+      </div>
+    </div>
     <div class="container d-flex justify-content-between">
    
   
@@ -26,9 +45,9 @@ import { store } from '../data/store';
                   Home
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="#">Menu food</a></li>
+                <li><a class="dropdown-item" href="#">Menu drinks</a></li>
+                <li><a class="dropdown-item" href="#">Extra</a></li>
               </ul>
             </div>
           </li>
@@ -54,6 +73,7 @@ import { store } from '../data/store';
   background-image: url(../assets/img/home-background-hero-scaled.jpg);
   height: 1000px;
   background-size: cover;
+  position: relative;
   .container{
     padding-top: 60px;
     img{
@@ -106,6 +126,68 @@ import { store } from '../data/store';
         line-height: 20px;
         text-align: center;
       }
+    }
+  }
+
+  .plus{
+    color: white;
+    font-size: 1.8rem;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(206, 26, 38);
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    &:hover{
+      background-color: rgb(151, 75, 80);
+      cursor: pointer;
+    }
+  }
+
+  .container-square{
+    position: absolute;
+    color: rgb(88, 71, 82);
+    right: 10px;
+    top: 150px;
+    .square{
+      height: 70px;
+      width: 70px;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      
+      .icon{
+        font-size: 2rem;
+  
+      }
+      .demo{
+        margin-top: -20px;
+      }
+      p{
+        font-size: .9rem;
+        font-weight: bold;
+      }
+      .green{
+        color: rgb(103, 189, 125);
+        font-weight: bold;
+        
+      }
+      p.green{
+          font-size: 1.9rem;
+          margin-bottom: 0;
+        }
+        
+      .sale{
+        position: absolute;
+        left: 10px;
+        top: 3px;
+        
+      }
+
+
+      
     }
   }
 }
