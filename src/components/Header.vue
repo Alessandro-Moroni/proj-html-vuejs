@@ -120,6 +120,9 @@ import { store } from '../data/store';
       border-radius: 20px;
       font-size: .8rem;
       padding: 10px 30px;
+      &:hover{
+        background-color: rgb(170, 19, 29);
+      }
       i{
         margin-left: 8px;
         background-color: white;

@@ -215,6 +215,9 @@ import { menu } from '../data/db.json';
       border-radius: 25px;
       margin-bottom: 40px;
       background-color: rgb(206, 26, 38);
+      &:hover{
+        background-color: rgb(170, 19, 29);
+      }
     }
     li{
       list-style: none;
