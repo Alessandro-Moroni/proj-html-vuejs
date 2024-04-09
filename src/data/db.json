@@ -1,0 +1,24 @@
+{
+  "menu":[
+    {
+      "id": 1,
+      "'title": "ORDER ONLINE",
+      "list": [
+        "Appetizers",
+        "Burgers",
+        "Pizza",
+        "Fries",
+        "Sides",
+        "Desserts",
+        "Beverages",
+        "Specials"
+      ]
+    }
+  ]
+   
+}
+
+  
+ 
+ 
+ 

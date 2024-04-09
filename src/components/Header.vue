@@ -38,7 +38,8 @@ import { store } from '../data/store';
       <img src="../assets/img/takeout-logo.png" alt="">
     
       <div class="menu">
-        <ul class="d-flex justify-content-between align-items-center">
+        <nav>
+          <ul class="d-flex justify-content-between align-items-center">
           <li>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle btn-menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,6 +55,8 @@ import { store } from '../data/store';
           <li v-for="el in this.store.headerMenu" :key="el" class="li-menu"><a href="">{{ el }}</a></li>
           <li class="li-menu"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
+        </nav>
+        
       </div>
   
     
@@ -73,6 +76,7 @@ import { store } from '../data/store';
   background-image: url(../assets/img/home-background-hero-scaled.jpg);
   height: 1000px;
   background-size: cover;
+  background-position: center;
   position: relative;
   .container{
     padding-top: 60px;
