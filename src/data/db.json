@@ -2,7 +2,7 @@
   "menu":[
     {
       "id": 1,
-      "'title": "ORDER ONLINE",
+      "title": "ORDER ONLINE",
       "list": [
         "Appetizers",
         "Burgers",
@@ -12,6 +12,32 @@
         "Desserts",
         "Beverages",
         "Specials"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "NAVIGATE",
+      "list": [
+        "Home",
+        "Alternate Home",
+        "Menu",
+        "About",
+        "News",
+        "Contact us",
+        "Cart"
+        
+      ]
+    },
+    {
+      "id": 3,
+      "title": "INFORMATION",
+      "firstLogo": "app-store-badge-200x67.png",
+      "secondLogo": "play-store-badge-200x67.png",
+      "list": [
+        "My account",
+        "Terms Of Service",
+        "Privacy Policy"
+       
       ]
     }
   ]
