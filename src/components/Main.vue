@@ -1,9 +1,13 @@
 <script>
 import Card from './partials/Card.vue';
+import Categories from './partials/Categories.vue';
+import Type from './partials/Type.vue';
 import { store } from '../data/store';
   export default {
     components:{
       Card,
+      Categories,
+      Type,
     },
     data(){
       return{
@@ -58,8 +62,26 @@ import { store } from '../data/store';
       <button type="button" class="btn btn-danger">VIEW THE FULL MENU <i class="fa-solid fa-arrow-right"></i></button>
     </div>
 
-    <div class="row">
+    <div class="row row-cols-4 ">
+      <Categories />
+    </div>
 
+    <div class="row types">
+      <Type />
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid bg-app d-flex align-items-center">
+    <div class="container">
+
+      <span>Download Our</span>
+      <h3>Ordering App</h3>
+      <div class="d-flex">
+        <img src="../assets/img/app-store-badge-200x67.png" alt="">
+        <img src="../assets/img/play-store-badge-200x67.png" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -116,5 +138,29 @@ import { store } from '../data/store';
   background-position: center;
 }
 
+.types{
+  margin: 50px 0 80px 0;
+}
+
+.bg-app{
+  background-image: url(../assets/img/app-ordering-scaled.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  font-weight: bold;
+  span{
+    color: white;
+    font-size: 2rem;
+  }
+  h3{
+    font-weight: bold;
+    color: rgb(252, 220, 49);
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+  img{
+    margin-right: 20px;
+  }
+}
 
 </style>

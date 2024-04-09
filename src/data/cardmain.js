@@ -1,22 +1,23 @@
-export const cardmain = {
-  menu:[
+ 
+  export const cardmain = [
     {
-      image: '../../assets/img/skin-on-fries.jpg',
+      image: '../public/images/skin-on-fries.jpg',
       title: 'Skin On Fries',
       price: '$3.00-$6.00',
+      id:1,
       
     },
     {
-      image: '../../assets/img/choco-cookie-frappe.jpg',
+      image: '../public/images/choco-cookie-frappe.jpg',
       title: 'Choco Cookie Frappe',
       price: '$4.99',
+      id:2,
       
     },
     {
-      image: '../../assets/img/donut-burger.jpg',
+      image: '../public/images/donut-burger.jpg',
       title: 'The Donut Burger',
       price: '$6.99',
-      
+      id:3,
     },
   ]
-}

@@ -1,13 +1,12 @@
 <script>
 import { cardmain } from '../../data/cardmain.js';
-
   export default {
     props:{
-      
+     
     },
     data(){
       return{
-        cardmain,
+        cardmain: cardmain
         
       }
     },
@@ -16,19 +15,20 @@ import { cardmain } from '../../data/cardmain.js';
 </script>
 
 <template>
-  <div class="card col" v-for="el in cardmain.menu" :key="el">
-    <img :src="el.image" alt="">
-    <!-- <img src="../../assets/img/skin-on-fries.jpg" alt=""> -->
-    <h3>{{ el.title }}</h3>
-    <p>{{ el.price }}</p>
+  <div class="card col" v-for="item in cardmain" :key="item.id">
+    <img :src="item.image" alt="image">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.price }}</p>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
+.card{
+  border: none;
+}
 img{
-  height: 100%;
-  width: 100%;
+  margin-bottom: 30px;
 }
 p{
   color: rgb(213, 122, 132);
