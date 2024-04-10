@@ -46,9 +46,9 @@ import { store } from '../data/store';
                   Home
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Menu food</a></li>
-                <li><a class="dropdown-item" href="#">Menu drinks</a></li>
-                <li><a class="dropdown-item" href="#">Extra</a></li>
+
+                <li v-for="elements in this.store.menuDropdown" :key="elements"><a class="dropdown-item" href="#">{{ elements }}</a></li>
+                
               </ul>
             </div>
           </li>
@@ -97,6 +97,9 @@ import { store } from '../data/store';
       a{
         color: white;
         text-decoration: none;
+        &:hover{
+          color: rgb(255, 228, 50);
+        }
       }
     }
    

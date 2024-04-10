@@ -1,14 +1,22 @@
 <script>
 import Column from './partials/Column.vue';
+import Columnthree from './partials/Columnthree.vue';
+import Columnfour from './partials/Columnfour.vue';
+import Columnfive from './partials/Columnfive.vue';
 import { menu } from '../data/db.json';
+import { store } from '../data/store';
 
   export default {
     components:{
       Column,
+      Columnthree,
+      Columnfour,
+      Columnfive,
     },
     data(){
       return{
         menu,
+        store,
       }
     }
     
@@ -25,52 +33,13 @@ import { menu } from '../data/db.json';
         <div class="row">
           
           <Column v-for="el in this.menu" :key="el.id" :listMenu="el"/>
+
+          <Columnthree />
          
-          <div class="col" >
-            <nav>
-              <ul>
-                <h4>OPENING HOURS</h4>
-  
-              </ul>
-              <ul>
-                <li>
-                  <a href="">Mon-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Tue-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Wed-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Thur-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Fri-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Sat-<span>10AM to 11PM</span></a>
-                </li>
-                <li>
-                  <a href="">Sun-<span>11AM to 10PM</span></a>
-                </li>
-                
-              </ul>
-            </nav>
-  
-          </div>
-  
-          <div class="col text-center last-col" >
-           
-            <h4>VOUCHER</h4>
-                     
-            <img src="../assets/img/footer-coupon.png" alt="">
-  
-            <span>JustUseTheCode</span>
-            <h3>FIRSTORDER</h3>
-            <span>AtCheckout</span>
-  
-          </div>
+          <Columnfour />
+         
+          <Columnfive />
+          
   
         </div>
         
@@ -97,33 +66,14 @@ import { menu } from '../data/db.json';
         <div class="d-flex justify-content-center ">
           <nav>
             <ul class="d-flex">
-              <li><a href="">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a></li>
 
-              <li><a href="">
-                <i class="fa-brands fa-twitter"></i>
-              </a></li>
+              <li v-for="el in this.store.footerFont" :key="el">
+                <a href="">
+                  <i :class="el"></i>
+                </a>
+              </li>
 
-              <li><a href="">
-                <i class="fa-brands fa-instagram"></i>
-              </a></li>
-
-              <li><a href="">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a></li>
-
-              <li><a href="">
-                <i class="fa-solid fa-wifi"></i>
-              </a></li>
-
-              <li><a href="">
-                <i class="fa-brands fa-youtube"></i>
-              </a></li>
-
-              <li><a href="">
-                <i class="fa-regular fa-envelope"></i>
-              </a></li>
+              
             </ul>
           </nav>
         </div>
@@ -181,15 +131,7 @@ import { menu } from '../data/db.json';
         width: 180px;
       }
     }
-    .last-col{
-      img{
-        margin-bottom: 20px;
-      }
-      h3{
-        color: rgb(255, 225, 52);
-        margin-bottom: 0;
-      }
-    }
+    
   }
   .gradient{
     height: 100%;
@@ -235,8 +177,9 @@ import { menu } from '../data/db.json';
       }
     }
     span{
-      color: rgb(249, 218, 66);
+      color:  rgb(249, 218, 66);
     }
+    
   }
 }
 </style>

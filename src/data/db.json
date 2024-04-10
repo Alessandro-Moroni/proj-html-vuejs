@@ -27,19 +27,8 @@
         "Cart"
         
       ]
-    },
-    {
-      "id": 3,
-      "title": "INFORMATION",
-      "firstLogo": "app-store-badge-200x67.png",
-      "secondLogo": "play-store-badge-200x67.png",
-      "list": [
-        "My account",
-        "Terms Of Service",
-        "Privacy Policy"
-       
-      ]
     }
+    
   ]
    
 }
