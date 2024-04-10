@@ -25,7 +25,7 @@ import { store } from '../data/store';
 
 <template>
   <div class="container-fluid back">
-    <div class=" gradient">
+    
 
       <div class="container-xl">
         <img class="apple" src="../assets/img/app-store-badge-200x67.png" alt="">
@@ -80,7 +80,7 @@ import { store } from '../data/store';
 
         <p><span>@Copyright 2012-2020 | Avada There by </span>ThemeFusion <span>| All Rights Reserved | Powered by </span>WordPress</p>
       </div>
-    </div>
+    
 
 
   </div>
@@ -90,9 +90,11 @@ import { store } from '../data/store';
 <style lang="scss" scoped>
 .back{
   background-image: url(../assets/img/pizza.jpg);
+  background-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 60%), url(../assets/img/pizza.jpg);
   height: 1000px;
   background-size: cover;
   background-position: center;
+  
   .container-xl{
     color: white;
     padding-top: 100px;
@@ -133,11 +135,7 @@ import { store } from '../data/store';
     }
     
   }
-  .gradient{
-    height: 100%;
-    width: 100%;
-    background: rgb(14, 14, 14, .5);
-  }
+ 
 
   .down-footer{
     margin-top: 100px;
