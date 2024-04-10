@@ -17,7 +17,7 @@ import { menu } from '../data/db.json';
 
 <template>
   <div class="container-fluid back">
-    <div class="container-fluid gradient">
+    <div class=" gradient">
 
       <div class="container-xl">
         <img class="apple" src="../assets/img/app-store-badge-200x67.png" alt="">
@@ -140,7 +140,6 @@ import { menu } from '../data/db.json';
 <style lang="scss" scoped>
 .back{
   background-image: url(../assets/img/pizza.jpg);
-  
   height: 1000px;
   background-size: cover;
   background-position: center;
@@ -166,6 +165,9 @@ import { menu } from '../data/db.json';
         a{
           text-decoration: none;
           color: white;
+          &:hover{
+          color: rgb(249, 218, 66);
+        }
           span{
             color: rgb(217, 157, 11);
           }
@@ -191,6 +193,7 @@ import { menu } from '../data/db.json';
   }
   .gradient{
     height: 100%;
+    width: 100%;
     background: rgb(14, 14, 14, .5);
   }
 
@@ -225,6 +228,10 @@ import { menu } from '../data/db.json';
       a{
         text-decoration: none;
         color: white;
+        &:hover{
+          color: rgb(249, 218, 66);
+        }
+
       }
     }
     span{

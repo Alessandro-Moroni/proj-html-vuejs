@@ -2,12 +2,14 @@
 import Card from './partials/Card.vue';
 import Categories from './partials/Categories.vue';
 import Type from './partials/Type.vue';
+import Lastcard from './partials/Lastcard.vue';
 import { store } from '../data/store';
   export default {
     components:{
       Card,
       Categories,
       Type,
+      Lastcard,
     },
     data(){
       return{
@@ -20,6 +22,7 @@ import { store } from '../data/store';
 <template>
   <div class="container under">
     
+    <!-- container in position absolute -->
     <div class="container above d-flex justify-content-around">
       <div>
         <i class="fa-regular fa-clock"></i>24/7 DELIVERY
@@ -40,6 +43,7 @@ import { store } from '../data/store';
     </div>
 
   </div>
+  <!-- card most popular -->
   <div class="container text-center card-top">
     <h1>Our Most Popular Dishes</h1>
 
@@ -54,7 +58,7 @@ import { store } from '../data/store';
   <div class="container-fluid wave-image"> 
     
   </div>
-
+  <!-- card menu categories -->
   <div class="container mt-5 ">
     <div class="d-flex justify-content-between align-items-center">
       <h3>Menu Categories</h3>
@@ -72,7 +76,7 @@ import { store } from '../data/store';
 
   </div>
 
-
+  <!-- bc download app -->
   <div class="container-fluid bg-app d-flex align-items-center">
     <div class="container">
 
@@ -83,6 +87,18 @@ import { store } from '../data/store';
         <img src="../assets/img/play-store-badge-200x67.png" alt="">
       </div>
     </div>
+  </div>
+
+  <div class="container last-section">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3>Latest News</h3>
+      <button type="button" class="btn btn-danger">READ MORE NEWS <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="row row-cols-2 ">
+      <Lastcard />
+    </div>
+
   </div>
 </template>
 
@@ -96,7 +112,7 @@ import { store } from '../data/store';
   position: absolute;
   background-color: white;
   padding-top: 50px;
-  top: -35px;
+  top: -30%;
   left: 50%;
   transform: translateX(-50%);
   .fa-solid{
@@ -163,4 +179,11 @@ import { store } from '../data/store';
   }
 }
 
+.last-section{
+  margin-top: 100px;
+  margin-bottom: 150px;
+  h3{
+    font-weight: bold;
+  }
+}
 </style>

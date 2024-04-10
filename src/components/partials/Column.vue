@@ -20,8 +20,7 @@
       </ul>
       
     </nav>
-    <!-- <img :src="`../../assets/img/${listMenu.firstLogo}`" alt="">
-    <img :src="`../../assets/img/${listMenu.secondLogo}`" alt=""> -->
+    
 
   </div>
 
@@ -44,6 +43,9 @@ li{
   a{
       text-decoration: none;
       color: white;
+      &:hover{
+          color: rgb(249, 218, 66);
+        }
   }
 }
 img{
